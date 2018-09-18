@@ -5,8 +5,7 @@ import store from './store'
 import './registerServiceWorker'
 import VueHighlightJS from 'vue-highlightjs'
 
-import 'bulma-fluent'
-import 'bulma-addons'
+import './customized-theme.sass'
 
 Vue.use(VueHighlightJS)
 Vue.config.productionTip = false

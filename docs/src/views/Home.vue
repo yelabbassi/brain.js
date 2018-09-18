@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div>
     <Hero></Hero>
   </div>
 </template>
@@ -8,7 +8,6 @@
 import Hero from '@/components/Hero'
 
 export default {
-  name: 'home',
   components: { Hero },
 }
 </script>

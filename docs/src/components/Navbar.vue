@@ -1,8 +1,9 @@
 <template>
-  <nav class="navbar is-warning">
+  <nav class="navbar is-dark">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+      <a class="navbar-item" href="//brain.js.org">
+        <img src="@/assets/logo.svg" alt="Brain.js logo" width="28" height="28">
+        &nbsp; Brain.js
       </a>
       <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
         <span></span>
@@ -13,7 +14,7 @@
 
     <div id="navbarExampleTransparentExample" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item" href="https://bulma.io/">
+        <a class="navbar-item" href="//brain.js.org/">
           Home
         </a>
         <div class="navbar-item has-dropdown is-hoverable">
@@ -24,23 +25,23 @@
             <a class="navbar-item" href="/documentation/overview/start/">
               Overview
             </a>
-            <a class="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">
+            <a class="navbar-item" href="//brain.js.org/documentation/modifiers/syntax/">
               Modifiers
             </a>
-            <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
+            <a class="navbar-item" href="//brain.js.org/documentation/columns/basics/">
               Columns
             </a>
-            <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
+            <a class="navbar-item" href="//brain.js.org/documentation/layout/container/">
               Layout
             </a>
-            <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
+            <a class="navbar-item" href="//brain.js.org/documentation/form/general/">
               Form
             </a>
             <hr class="navbar-divider">
-            <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
+            <a class="navbar-item" href="//brain.js.org/documentation/elements/box/">
               Elements
             </a>
-            <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
+            <a class="navbar-item is-active" href="//brain.js.org/documentation/components/breadcrumb/">
               Components
             </a>
           </div>
