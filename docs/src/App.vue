@@ -1,7 +1,11 @@
 <template>
   <div id="app">
-    <Navbar></Navbar>
-    <router-view/>
+    <Navbar/>
+    <transition
+      name="slide-right"
+      mode="out-in">
+      <router-view/>
+    </transition>
   </div>
 </template>
 <script>
