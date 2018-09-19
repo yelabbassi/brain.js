@@ -14,21 +14,23 @@
           <div class="media-content">
             <div class="content">
               <p>
-                <span class="title">Brain.js</span>
+                <span class="title is-1">Brain.js</span>
                 <br>
-                <span class="subtitle">Neural networks in JavaScript</span>
+                <span class="subtitle is-2">Neural networks in JavaScript</span>
                 <br>
                 for Browser and Node.js
               </p>
               <a
                 href="//github.com/BrainJS/brain.js"
-                class="button is-small is-dark">
+                class="button is-small is-dark"
+                title="Github Repository">
                 Github
               </a>
               &nbsp;
               <router-link
                 to="/getting-started"
-                class="button is-small is-dark">
+                class="button is-small is-dark"
+                title="Installation & Quick Start">
                 Getting Started
               </router-link>
 
