@@ -1,5 +1,5 @@
 <template>
-  <section class="hero is-medium is-primary">
+  <section class="hero is-primary">
     <div class="hero-body">
       <div class="container">
         <article class="media">
@@ -20,20 +20,19 @@
                 <br>
                 for Browser and Node.js
               </p>
-              <a
-                href="//github.com/BrainJS/brain.js"
-                class="button is-small is-dark"
-                title="Github Repository">
-                Github
-              </a>
-              &nbsp;
               <router-link
                 to="/getting-started"
-                class="button is-small is-dark"
+                class="button is-dark"
                 title="Installation & Quick Start">
                 Getting Started
               </router-link>
-
+              &nbsp;
+              <a
+                href="//github.com/BrainJS/brain.js"
+                class="button is-dark"
+                title="Github Repository">
+                Github
+              </a>
             </div>
           </div>
         </article>

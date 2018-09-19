@@ -1,13 +1,11 @@
 <template>
   <div>
-    <Hero/>
+    <h1>Home</h1>
   </div>
 </template>
 
 <script>
-import Hero from '@/components/Hero'
-
 export default {
-  components: { Hero },
+  components: {},
 }
 </script>
