@@ -18,7 +18,7 @@
                 <br>
                 <span class="subtitle">Neural networks in JavaScript</span>
                 <br>
-                for Browsers and Node.js
+                for Browser and Node.js
               </p>
               <a
                 href="//github.com/BrainJS/brain.js"

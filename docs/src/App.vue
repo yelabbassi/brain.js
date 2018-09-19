@@ -2,7 +2,7 @@
   <div id="app">
     <Navbar/>
     <transition
-      name="slide-right"
+      name="slide-up"
       mode="out-in">
       <router-view/>
     </transition>

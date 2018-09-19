@@ -1,9 +1,9 @@
 <template>
   <nav class="navbar is-dark">
     <div class="navbar-brand">
-      <a
-        class="navbar-item"
-        href="/">
+      <router-link
+        to="/"
+        class="navbar-item">
         <img
           src="@/assets/logo.svg"
           alt="Brain.js logo"
@@ -11,7 +11,7 @@
           height="28"
           class="bordered">
         &nbsp; Brain.js
-      </a>
+      </router-link>
       <div
         class="navbar-burger burger"
         data-target="navbarExampleTransparentExample">
@@ -37,13 +37,14 @@
           <i class="material-icons">collections</i>
           &nbsp;Examples
         </router-link>
-        <router-link
-          to="/documentation"
-          class="navbar-item">
+        <a
+          href="//github.com/BrainJS/brain.js#brainjs"
+          class="navbar-item"
+          target="_blank">
           <i class="material-icons">list</i>
           &nbsp;Documentation
         </router-link>
-      </div>
+      </a></div>
 
       <div class="navbar-end">
         <div class="navbar-item">
@@ -74,7 +75,7 @@
             </p>
             <p class="control">
               <a
-                class="button is-light"
+                class="button is-light is-highlighted"
                 href="//opencollective.com/brainjs">
                 <i class="material-icons">attach_money</i>
                 <span>&nbsp; Support</span>
