@@ -1,5 +1,7 @@
 <template>
-  <section class="hero is-primary">
+  <section
+    :class="{'is-medium': $route.name === 'home'}"
+    class="hero is-primary">
     <div class="hero-body">
       <div class="container">
         <article class="media">
@@ -20,19 +22,26 @@
                 <br>
                 for Browser and Node.js
               </p>
-              <router-link
-                to="/getting-started"
-                class="button is-dark"
-                title="Installation & Quick Start">
-                Getting Started
-              </router-link>
-              &nbsp;
-              <a
-                href="//github.com/BrainJS/brain.js"
-                class="button is-dark"
-                title="Github Repository">
-                Github
-              </a>
+              <div class="field is-grouped">
+                <p class="control">
+                  <router-link
+                    to="/getting-started"
+                    class="button is-dark"
+                    title="Installation & Quick Start">
+                    Getting Started
+                  </router-link>
+                </p>
+                <p class="control">
+                  <a
+                    href="//github.com/BrainJS/brain.js"
+                    class="button is-dark"
+                    title="Github Repository"
+                    target="_blank">
+                    Github
+                  </a>
+                </p>
+              </div>
+
             </div>
           </div>
         </article>
