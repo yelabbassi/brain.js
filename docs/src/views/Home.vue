@@ -33,7 +33,11 @@
               {{ highlight.title }}:
             </strong>
             <br>
-            {{ highlight.description }} {{ highlight.link }}
+            {{ highlight.description }}
+            <br><br>
+            <a
+              v-show="highlight.link"
+              :href="highlight.link">Details</a>
           </div>
         </article>
       </div>
@@ -45,17 +49,14 @@
     <h2 class="title is-3">Neural Network Types</h2>
     <hr>
     <div class="network-list">
-      <article
-        v-for="network in $store.state.networks"
-        :key="network.title"
-        class="message is-dark">
-        <div class="message-body">
-          <span class="title is-3">{{ network.title }}</span>
-          <p>{{ network.description }}</p>
-          <br>
-          <a :href="network.link">More Info >></a>
-        </div>
-      </article>
+      <ul>
+        <li
+          v-for="network in $store.state.networks"
+          :key="network.title">
+          <strong>{{ network.title }}</strong>
+          <p>{{ network.description }} <a :href="network.link">Details</a></p>
+        </li>
+      </ul>
     </div> -->
 
     <br>
@@ -190,7 +191,6 @@ export default {
     margin-right: 0.5em
     margin-bottom: 0.5em
 
-
 .highlight-list
   .message
     display: inline-block
@@ -201,12 +201,13 @@ export default {
       background-color: #fff
 
 .network-list
-  .message
-    display: inline-block
-    width: 45%
-    margin-bottom: 2em!important
-    &:nth-child(2n)
-      margin-left: 5%
-    .message-body
-      background-color: #fff
+  li
+    margin-bottom: 0.75em
+
+@media only screen and (max-width: 1024px)
+  .highlight-list
+    .message
+      width: 100%
+      margin-left: 0!important
+
 </style>

@@ -1,5 +1,8 @@
 <template>
-  <h1>Examples</h1>
+  <div>
+    <h2 class="title is-4">Examples</h2>
+    <span>Coming Soon!</span>
+  </div>
 </template>
 
 <script>

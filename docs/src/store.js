@@ -39,19 +39,34 @@ export default new Vuex.Store({
     ],
     highlights: [
       {
-        title: 'Based on GPU.js',
-        description: 'Base don well konwn and test GPU.js',
-        link: '',
+        title: 'Simple to Use',
+        description:
+          'Brain.js is super simple to use. You do not need to know Neural Networks in details to work with this. ',
+        link: '//github.com/BrainJS/brain.js#examples',
       },
       {
-        title: 'Easy to use API',
-        description: '',
-        link: '',
+        title: 'Based on GPU.js',
+        description:
+          'Brain.js utilizes GPU.js to perform massively parallel GPGPU computations using GPU and graceful pure JavaScript fallback when GPU is not available.',
+        link: '//github.com/gpujs/gpu.js',
+      },
+      {
+        title: 'Neural Networks',
+        description:
+          'Brain.js provided multiple neural network implementations as different neural nets suited to do different things well.',
+        link: '//github.com/BrainJS/brain.js#neural-network-types',
+      },
+      {
+        title: 'Activation Functions',
+        description:
+          'There are currently four supported activation functions, sigmoid being the default: sigmoid,relu,leaky-relu,tanh',
+        link: '//github.com/BrainJS/brain.js#json',
       },
       {
         title: 'Export & Import',
-        description: '',
-        link: '',
+        description:
+          'Easily export and import trained models to JSON format and as a function. Host pre-trained models on your website easily. ',
+        link: '//github.com/BrainJS/brain.js#json',
       },
     ],
     networks: [

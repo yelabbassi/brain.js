@@ -26,6 +26,13 @@
       class="navbar-menu">
       <div class="navbar-start">
         <router-link
+          to="/"
+          class="navbar-item"
+          title="Home">
+          <i class="material-icons">home</i>
+          &nbsp;Home
+        </router-link>
+        <router-link
           to="/getting-started"
           class="navbar-item"
           title="Installation & Quick Start">
