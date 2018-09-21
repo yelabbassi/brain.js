@@ -1,30 +1,180 @@
 <template>
   <div>
-    <h2 class="title is-3">About <strong>Brain.js</strong></h2>
+    <h2 class="title is-3">About Brain.js</h2>
     <div class="content">
-      <p>ss</p>
+      <p class="">Brain.js is a library of Neural Networks written in JavaScript.</p>
     </div>
 
-    <hr>
+    <br>
+    <br>
+    <div class="custom-tags has-text-centered">
+      <span
+        v-for="feature in $store.state.features"
+        :key="feature.title"
+        class="tag is-dark is-medium">{{ feature.title }}</span>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <!-- <h2 class="title is-3">Highlights</h2>
+    <hr> -->
+    <div class="container">
+      <div class="highlight-list">
+        <article
+          v-for="highlight in $store.state.highlights"
+          :key="highlight.title"
+          class="message is-primary">
+          <!-- <div class="message-header">
+            <p><strong>{{ highlight.title }}</strong></p>
+          </div> -->
+          <div class="message-body">
+            <strong>
+              {{ highlight.title }}:
+            </strong>
+            <br>
+            {{ highlight.description }} {{ highlight.link }}
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- <br>
+    <br>
 
     <h2 class="title is-3">Neural Network Types</h2>
+    <hr>
     <div class="network-list">
-      <ul>
-        <li
-          v-for="network in $store.state.networks"
-          :key="network.title"
-          class="">
-          <div>
-            <h1 class="title">
-              {{ network.title }}
-            </h1>
-            <h2 class="subtitle">
-              {{ network.description }}
-              <a :href="network.link">info</a>
-            </h2>
-          </div>
-      </li></section></ul>
+      <article
+        v-for="network in $store.state.networks"
+        :key="network.title"
+        class="message is-dark">
+        <div class="message-body">
+          <span class="title is-3">{{ network.title }}</span>
+          <p>{{ network.description }}</p>
+          <br>
+          <a :href="network.link">More Info >></a>
+        </div>
+      </article>
+    </div> -->
+
+    <br>
+    <hr>
+    <br>
+    <div class="columns">
+      <div class="column">
+        <h2 class="title is-3">
+          Ready to start?
+        </h2>
+        <div class="content">
+          <p>Read
+            <a href="http://github.com/BrainJS/brain.js#brainjs">Documentation</a>
+            or view <router-link
+              to="/examples"
+              title="Examples"
+              class="">
+              Live Examples
+            </router-link>
+          </p>
+          <router-link
+            to="/getting-started"
+            class="button is-primary is-large"
+            title="Installation & Quick Start">
+            Get Started Now
+          </router-link>
+        </div>
+      </div>
+
+      <div class="column">
+        <h2 class="title is-3">
+          Support
+        </h2>
+        <div class="content">
+          <p>Support this project by becoming a Sponsor or Backer. </p>
+          <router-link
+            to="//opencollective.com/brainjs#sponsor"
+            title="Sponsor"
+            class="button is-primary is-large">
+            Become a Sponsor
+          </router-link>
+        </div>
+      </div>
+
+      <div class="column">
+        <h2 class="title is-3">
+          Be a Part of Brain.js
+        </h2>
+        <div class="content">
+          <p>Contrinutions are always welcome!</p>
+          <a
+            href="//github.com/BrainJS/brain.js/blob/master/CONTRIBUTING.md"
+            class="button is-primary is-large"
+            title="Github Repository"
+            target="_blank">
+            Contribute
+          </a>
+        </div>
+      </div>
     </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="content has-text-centered">
+      <h2 class="title is-3">Sponsors/ Backers</h2>
+      <p>Thank you to all our Sponsors and Backers! 🙏</p>
+      <p>
+        <a
+          href="https://opencollective.com/brainjs/sponsor/0/website"
+          target="_blank"><img src="https://opencollective.com/brainjs/sponsor/0/avatar.svg"></a>
+        <a
+          href="https://opencollective.com/brainjs/sponsor/1/website"
+          target="_blank"><img src="https://opencollective.com/brainjs/sponsor/1/avatar.svg"></a>
+        <a
+          href="https://opencollective.com/brainjs/sponsor/2/website"
+          target="_blank"><img src="https://opencollective.com/brainjs/sponsor/2/avatar.svg"></a>
+        <a
+          href="https://opencollective.com/brainjs/sponsor/3/website"
+          target="_blank"><img src="https://opencollective.com/brainjs/sponsor/3/avatar.svg"></a>
+        <a
+          href="https://opencollective.com/brainjs/sponsor/4/website"
+          target="_blank"><img src="https://opencollective.com/brainjs/sponsor/4/avatar.svg"></a>
+        <a
+          href="https://opencollective.com/brainjs/sponsor/5/website"
+          target="_blank"><img src="https://opencollective.com/brainjs/sponsor/5/avatar.svg"></a>
+        <a
+          href="https://opencollective.com/brainjs/sponsor/6/website"
+          target="_blank"><img src="https://opencollective.com/brainjs/sponsor/6/avatar.svg"></a>
+        <a
+          href="https://opencollective.com/brainjs/sponsor/7/website"
+          target="_blank"><img src="https://opencollective.com/brainjs/sponsor/7/avatar.svg"></a>
+        <a
+          href="https://opencollective.com/brainjs/sponsor/8/website"
+          target="_blank"><img src="https://opencollective.com/brainjs/sponsor/8/avatar.svg"></a>
+        <a
+          href="https://opencollective.com/brainjs/sponsor/9/website"
+          target="_blank"><img src="https://opencollective.com/brainjs/sponsor/9/avatar.svg"></a>
+
+        <br>
+        <a
+          href="https://opencollective.com/brainjs#backers"
+          target="_blank"><img src="https://opencollective.com/brainjs/backers.svg?width=890"></a>
+      </p>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="content has-text-centered">
+      <h2 class="title is-3">Contributors</h2>
+      <p>This project exists thanks to all the people who contribute.<br><br>
+      <a href="graphs/contributors"><img src="https://opencollective.com/brainjs/contributors.svg?width=890&button=false" ></a></p>
+    </div>
+
+    <br>
+
   </div>
 </template>
 
@@ -35,4 +185,28 @@ export default {
 </script>
 
 <style lang="sass">
+.custom-tags
+  .tag
+    margin-right: 0.5em
+    margin-bottom: 0.5em
+
+
+.highlight-list
+  .message
+    display: inline-block
+    width: 45%
+    &:nth-child(2n)
+      margin-left: 5%
+    .message-body
+      background-color: #fff
+
+.network-list
+  .message
+    display: inline-block
+    width: 45%
+    margin-bottom: 2em!important
+    &:nth-child(2n)
+      margin-left: 5%
+    .message-body
+      background-color: #fff
 </style>

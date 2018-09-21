@@ -7,8 +7,51 @@ export default new Vuex.Store({
   state: {
     features: [
       {
-        title: '',
+        title: 'Fast & WebGL supported',
+      },
+      {
+        title: 'Easy to Use',
+      },
+      {
+        title: 'Async API',
+      },
+      {
+        title: 'Export & Import Trained Models',
+      },
+      {
+        title: 'Multiple Neural Networks',
+      },
+      {
+        title: 'Multiple Activation Functions',
+      },
+      {
+        title: 'Customizeable Hidden Layers',
+      },
+      {
+        title: 'Cross Validation',
+      },
+      {
+        title: 'Stream Training',
+      },
+      {
+        title: 'Customizeable',
+      },
+    ],
+    highlights: [
+      {
+        title: 'Based on GPU.js',
+        description: 'Base don well konwn and test GPU.js',
+        link: '',
+      },
+      {
+        title: 'Easy to use API',
         description: '',
+        link: '',
+      },
+      {
+        title: 'Export & Import',
+        description: '',
+        link: '',
       },
     ],
     networks: [

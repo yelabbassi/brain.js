@@ -22,7 +22,7 @@
                 <br>
                 for Browser and Node.js
               </p>
-              <div class="field is-grouped">
+              <!-- <div class="field is-grouped">
                 <p class="control">
                   <router-link
                     to="/getting-started"
@@ -40,8 +40,7 @@
                     Github
                   </a>
                 </p>
-              </div>
-
+              </div> -->
             </div>
           </div>
         </article>

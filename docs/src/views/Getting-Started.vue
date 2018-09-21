@@ -40,7 +40,7 @@
       You can manually download and inlcude scirpt file in your project:
       <br>
       <a
-        class="button is-light"
+        class="button is-primary"
         href="//unpkg.com/brain.js/dist/brain.min.js">Download Now</a>
     </div>
 
@@ -51,6 +51,15 @@
       <a
         class="button is-dark"
         href="//github.com/BrainJS/brain.js#brainjs">Continue to Documentation</a>
+      <br>
+      Or
+      <br>
+      <router-link
+        to="/examples"
+        title="Examples"
+        class="button is-dark">
+        View Live Examples
+      </router-link>
     </div>
   </div>
 </template>
