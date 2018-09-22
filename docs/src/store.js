@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state: {
     features: [
       {
-        title: 'Fast & WebGL supported',
+        title: 'Fast & GPU supported',
       },
       {
         title: 'Easy to Use',
@@ -47,21 +47,21 @@ export default new Vuex.Store({
       {
         title: 'Based on GPU.js',
         description:
-          'Brain.js utilizes GPU.js to perform massively parallel GPGPU computations using GPU and graceful pure JavaScript fallback when GPU is not available.',
+          'Brain.js performs computations using GPU and gracefully fallback to pure JavaSCript in Node.js or when GPU is not available.',
         link: '//github.com/gpujs/gpu.js',
       },
       {
-        title: 'Neural Networks',
+        title: 'Multiple Neural Networks',
         description:
           'Brain.js provided multiple neural network implementations as different neural nets suited to do different things well.',
         link: '//github.com/BrainJS/brain.js#neural-network-types',
       },
-      {
-        title: 'Activation Functions',
-        description:
-          'There are currently four supported activation functions, sigmoid being the default: sigmoid,relu,leaky-relu,tanh',
-        link: '//github.com/BrainJS/brain.js#json',
-      },
+      // {
+      //   title: 'Activation Functions',
+      //   description:
+      //     'There are currently four supported activation functions, sigmoid being the default: sigmoid,relu,leaky-relu,tanh',
+      //   link: '//github.com/BrainJS/brain.js#json',
+      // },
       {
         title: 'Export & Import',
         description:

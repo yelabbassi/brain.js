@@ -3,11 +3,13 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './registerServiceWorker'
-import VueHighlightJS from 'vue-highlightjs'
+
+/* animation tools */
+import './assets/scroll-event.js'
+/* animation tools */
 
 import './customized-theme.sass'
 
-Vue.use(VueHighlightJS)
 Vue.config.productionTip = false
 
 new Vue({

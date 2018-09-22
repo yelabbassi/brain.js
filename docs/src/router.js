@@ -29,5 +29,9 @@ export default new Router({
       component: () =>
         import(/* webpackChunkName: "examples" */ './views/Examples.vue'),
     },
+    {
+      path: '*',
+      redirect: '/',
+    },
   ],
 })

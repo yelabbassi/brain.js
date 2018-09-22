@@ -2,7 +2,7 @@
   <div>
     <h2 class="title is-3">About Brain.js</h2>
     <div class="content">
-      <p class="">Brain.js is a library of Neural Networks written in JavaScript.</p>
+      <p class="">Brain.js is a library of Neural Networks written in JavaScript. Brain.js is super simple to use. You do not need to know Neural Networks in details to work with this.</p>
     </div>
 
     <br>
@@ -43,22 +43,27 @@
       </div>
     </div>
 
-    <!-- <br>
     <br>
+    <br>
+    <br>
+    <div
+      class="content has-text-centered">
+      <span class="title is-3">Modular</span>
+      <p>Brain.js implmentation is highly modular to easily allow extendability. Extend as you want! </p>
 
-    <h2 class="title is-3">Neural Network Types</h2>
-    <hr>
-    <div class="network-list">
-      <ul>
-        <li
-          v-for="network in $store.state.networks"
-          :key="network.title">
-          <strong>{{ network.title }}</strong>
-          <p>{{ network.description }} <a :href="network.link">Details</a></p>
-        </li>
-      </ul>
-    </div> -->
+      <div
+        id="svg-logo-animation-container"
+        ref="svg-logo-animation-container">
 
+        <p
+          id="svg-logo-animation"
+          ref="svg-logo-animation"
+          class="label is-primary">Oalalalla</p>
+      </div>
+
+    </div>
+
+    <br>
     <br>
     <hr>
     <br>
@@ -182,6 +187,8 @@
 <script>
 export default {
   components: {},
+
+  mounted() {},
 }
 </script>
 
@@ -200,11 +207,7 @@ export default {
     .message-body
       background-color: #fff
 
-.network-list
-  li
-    margin-bottom: 0.75em
-
-@media only screen and (max-width: 1024px)
+@media only screen and (max-width: 1023px)
   .highlight-list
     .message
       width: 100%
