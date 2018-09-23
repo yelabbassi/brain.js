@@ -44,26 +44,54 @@
     </div>
 
     <br>
-    <br>
+    <hr>
     <br>
     <div
       class="content has-text-centered">
-      <span class="title is-3">Modular</span>
-      <p>Brain.js implmentation is highly modular to easily allow extendability. Extend as you want! </p>
-
       <div
         id="svg-logo-animation-container"
         ref="svg-logo-animation-container">
 
-        <p
-          id="svg-logo-animation"
-          ref="svg-logo-animation"
-          class="label is-primary">Oalalalla</p>
-      </div>
+        <h2 class="title is-3">Modular</h2>
+        <h3 class="subtitle is-5">Brain.js implmentation is highly modular to easily allow extendability. </h3>
 
+        <div
+          id="svg-logo-animation"
+          ref="svg-logo-animation">
+
+          <svg
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 200 200">
+            <rect
+              width="100%"
+              height="100%"
+              fill="#F3DF49"/>
+            <g class="logo-parts">
+              <polygon
+                :style="leftPart"
+                fill="#2E2E2C"
+                points="104.8,110.4 134.1,133.6 134.1,148.7 94.8,163.9 74.3,164.9 58.5,143.7 73.4,123.3"/>
+              <polygon
+                :style="rightPart"
+                fill="#2E2E2C"
+                points="139.4,148.7 139.4,133.6 134.3,104.4 148.4,103.5 185,126 180.5,153.6 166.4,164"/>
+              <polygon
+                :style="bottomPart"
+                fill="#2E2E2C"
+                points="163.1,167.6 137.3,153.2 101.3,166.6 142.8,177.7 148.4,186.2 155.2,186.2"/>
+              <polygon
+                :style="topPart"
+                fill="#2E2E2C"
+                points="111.1,108.3 133.5,127 128.9,105.3"/>
+            </g>
+          </svg>
+
+        </div>
+      </div>
     </div>
 
-    <br>
     <br>
     <hr>
     <br>
@@ -185,10 +213,67 @@
 </template>
 
 <script>
+/*globals scrollama */
+
 export default {
   components: {},
 
-  mounted() {},
+  data() {
+    return {
+      progress: 0,
+    }
+  },
+
+  computed: {
+    offset() {
+      let offset = Math.abs(0.4 - this.progress) * 250 // max 100 offset
+      if (offset < 0 || this.progress > 0.4) offset = 0
+
+      return offset
+    },
+    leftPart() {
+      return {
+        transform: `translateX(-${this.offset}px)`,
+        opacity: `${1.25 - this.offset / 80}`,
+      }
+    },
+    rightPart() {
+      return {
+        transform: `translateX(${this.offset}px)`,
+        opacity: `${1.25 - this.offset / 80}`,
+      }
+    },
+    bottomPart() {
+      return {
+        transform: `translateY(${this.offset}px)`,
+        opacity: `${1.25 - this.offset / 80}`,
+      }
+    },
+    topPart() {
+      return {
+        transform: `translateY(-${this.offset}px)`,
+        opacity: `${1.25 - this.offset / 80}`,
+      }
+    },
+  },
+
+  mounted() {
+    // scroll progress
+    const scroller = scrollama()
+    scroller
+      .setup({
+        step: '#svg-logo-animation',
+        progress: true,
+        threshold: 1,
+        offset: 0.66,
+      })
+      .onStepProgress(e => {
+        this.progress = e.progress
+      })
+
+    //handle window resize
+    window.addEventListener('resize', scroller.resize)
+  },
 }
 </script>
 
@@ -213,4 +298,11 @@ export default {
       width: 100%
       margin-left: 0!important
 
+#svg-logo-animation-container
+  #svg-logo-animation
+    background-color: #f3df49
+    svg
+      max-width: 640px
+    .logo-parts
+      transform: translateX(-25px) translateY(-42px)
 </style>

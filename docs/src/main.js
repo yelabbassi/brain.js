@@ -5,7 +5,9 @@ import store from './store'
 import './registerServiceWorker'
 
 /* animation tools */
-import './assets/scroll-event.js'
+import 'intersection-observer'
+import scrollama from 'scrollama'
+window.scrollama = scrollama
 /* animation tools */
 
 import './customized-theme.sass'
