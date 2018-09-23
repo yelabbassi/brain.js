@@ -226,8 +226,8 @@ export default {
 
   computed: {
     offset() {
-      let offset = Math.abs(0.4 - this.progress) * 250 // max 100 offset
-      if (offset < 0 || this.progress > 0.4) offset = 0
+      let offset = Math.abs(0.66 - this.progress) * 250 // max 100 offset
+      if (offset < 0 || this.progress > 0.66) offset = 0
 
       return offset
     },
