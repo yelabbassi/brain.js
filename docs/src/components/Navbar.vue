@@ -40,6 +40,13 @@
           &nbsp;Getting Started
         </router-link>
         <router-link
+          to="/tutorial"
+          class="navbar-item"
+          title="Tutorials">
+          <i class="material-icons">help</i>
+          &nbsp;Tutorials
+        </router-link>
+        <router-link
           to="/examples"
           class="navbar-item"
           title="View Examples">

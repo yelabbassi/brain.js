@@ -21,6 +21,15 @@ export default new Router({
         import(/* webpackChunkName: "getting-started" */ './views/Getting-Started.vue'),
     },
     {
+      path: '/tutorial',
+      name: 'tutorial',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () =>
+        import(/* webpackChunkName: "tutorial" */ './views/Tutorial.vue'),
+    },
+    {
       path: '/examples',
       name: 'examples',
       // route level code-splitting
@@ -34,4 +43,7 @@ export default new Router({
       redirect: '/',
     },
   ],
+  scrollBehavior() {
+    return { x: 0, y: 0 }
+  },
 })
