@@ -20,7 +20,7 @@
                 <br>
                 <span class="subtitle is-2">Neural networks in JavaScript</span>
                 <br>
-                for Browser and Node.js
+                for Browsers and Node.js
               </p>
               <!-- <div class="field is-grouped">
                 <p class="control">

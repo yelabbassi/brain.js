@@ -5,14 +5,19 @@
       <p class="">Brain.js is a library of Neural Networks written in JavaScript. Brain.js is super simple to use. You do not need to know Neural Networks in details to work with this.</p>
     </div>
 
-    <br>
+    <vue-swimlane
+      :words="featureList"
+      rows="3"
+      scale="2"/>
+
+    <!-- <br>
     <br>
     <div class="custom-tags has-text-centered">
       <span
         v-for="feature in $store.state.features"
         :key="feature.title"
         class="tag is-dark is-medium">{{ feature.title }}</span>
-    </div>
+    </div> -->
 
     <br>
     <br>
@@ -255,6 +260,11 @@ export default {
         opacity: `${1.25 - this.offset / 80}`,
       }
     },
+    featureList() {
+      return this.$store.state.features.map(i => {
+        return i.title
+      })
+    },
   },
 
   mounted() {
@@ -305,4 +315,9 @@ export default {
       max-width: 640px
     .logo-parts
       transform: translateX(-25px) translateY(-42px)
+
+.vue-swimlane
+  border: 2px solid whitesmoke
+  li
+    // background-color: black
 </style>

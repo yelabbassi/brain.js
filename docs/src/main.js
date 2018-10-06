@@ -4,6 +4,9 @@ import router from './router'
 import store from './store'
 import './registerServiceWorker'
 
+import VueSwimlane from 'vue-swimlane'
+Vue.use(VueSwimlane)
+
 /* animation tools */
 import 'intersection-observer'
 import scrollama from 'scrollama'

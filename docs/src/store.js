@@ -36,6 +36,9 @@ export default new Vuex.Store({
       {
         title: 'Customizeable',
       },
+      {
+        title: 'Modular',
+      },
     ],
     highlights: [
       {
