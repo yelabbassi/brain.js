@@ -18,24 +18,24 @@ export default new Vuex.Store({
       {
         title: 'Export & Import Trained Models',
       },
-      {
-        title: 'Multiple Neural Networks',
-      },
-      {
-        title: 'Multiple Activation Functions',
-      },
-      {
-        title: 'Customizeable Hidden Layers',
-      },
+      // {
+      //   title: 'Multiple Neural Networks',
+      // },
+      // {
+      //   title: 'Multiple Activation Functions',
+      // },
+      // {
+      //   title: 'Customizeable Hidden Layers',
+      // },
       {
         title: 'Cross Validation',
       },
       {
         title: 'Stream Training',
       },
-      {
-        title: 'Customizeable',
-      },
+      // {
+      //   title: 'Customizeable',
+      // },
       {
         title: 'Modular',
       },

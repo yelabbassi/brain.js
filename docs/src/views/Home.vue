@@ -1,14 +1,17 @@
 <template>
   <div>
-    <h2 class="title is-3">About Brain.js</h2>
-    <div class="content">
-      <p class="">Brain.js is a library of Neural Networks written in JavaScript. Brain.js is super simple to use. You do not need to know Neural Networks in details to work with this.</p>
-    </div>
+    <!-- <h2 class="title is-3">About</h2> -->
+    <h2 class="title is-4">
+      <p class="">Brain.js is a library of Neural Networks written in JavaScript for Browsers and Node.js. It is super simple to use, you do not need to know Neural Networks in details to work with this.</p>
+    </h2>
 
+    <br>
     <vue-swimlane
       :words="featureList"
-      rows="3"
-      scale="2"/>
+      :rows="1"
+      :scale="2"
+      :transition-delay="250"
+      :transition-duration="1000"/>
 
     <!-- <br>
     <br>
@@ -20,7 +23,7 @@
     </div> -->
 
     <br>
-    <br>
+    <hr>
     <br>
     <!-- <h2 class="title is-3">Highlights</h2>
     <hr> -->
@@ -46,6 +49,23 @@
           </div>
         </article>
       </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="columns">
+      <!-- <div class="column"/> -->
+      <div class="column">
+        <article class="message is-primary">
+          <div
+            class="message-header"
+            style="text-align: center">Coming Soon!</div>
+          <div class="message-body">Brain.js is being worked on to support GPU driven computation support for <strong>Node.js</strong></div>
+        </article>
+      </div>
+      <!-- <div class="column"/> -->
     </div>
 
     <br>
@@ -100,7 +120,7 @@
     <br>
     <hr>
     <br>
-    <div class="columns">
+    <div class="columns has-text-centered">
       <div class="column">
         <h2 class="title is-3">
           Ready to start?
@@ -317,7 +337,8 @@ export default {
       transform: translateX(-25px) translateY(-42px)
 
 .vue-swimlane
-  border: 2px solid whitesmoke
+  // border: 2px solid whitesmoke
   li
     // background-color: black
+    color: #f3df49
 </style>

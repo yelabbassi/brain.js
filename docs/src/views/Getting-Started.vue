@@ -3,14 +3,7 @@
     <h2 class="title is-3">
       Getting Started
     </h2>
-    <p class="subtitle is-4">There are multiple ways to use this library: </p>
-    <div class="content">
-      <ul>
-        <li>NPM</li>
-        <li>CDN</li>
-        <li>Download</li>
-      </ul>
-    </div>
+    <h3 class="subtitle is-4">There are multiple ways to use this library: </h3>
 
     <!-- NPM -->
     <h2 class="subtitle is-4">NPM</h2>
