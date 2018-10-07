@@ -58,18 +58,18 @@
     <div class="columns">
       <!-- <div class="column"/> -->
       <div class="column">
-        <article class="message is-primary">
+        <article class="message is-dark">
           <div
             class="message-header"
             style="text-align: center">Coming Soon!</div>
-          <div class="message-body">Brain.js is being worked on to support GPU driven computation support for <strong>Node.js</strong></div>
+          <div class="message-body">Brain.js is being worked on to enable GPU driven computation support for <strong>Node.js</strong></div>
         </article>
       </div>
       <!-- <div class="column"/> -->
     </div>
 
     <br>
-    <hr>
+    <br>
     <br>
     <div
       class="content has-text-centered">

@@ -3,17 +3,16 @@
     <h1 class="title is-3">Tutorials & Guides</h1>
     <h2 class="subtitle is-4">Some tutorials and guides to learn about Brain.js</h2>
 
-    <div class="custom-cards">
+    <div class="custom-messages">
       <div
         v-for="(tutorial, index) in $store.state.tutorials"
         :key="index"
-        class="card">
-        <div class="card-content">
-          <div class="content">
-            <strong>{{ tutorial.title }}</strong>
-            <br>
-            by {{ tutorial.author }}
-          </div>
+        class="message is-light">
+        <div class="message-header"><strong>{{ tutorial.title }}</strong></div>
+        <div class="message-body">
+          by {{ tutorial.author }}
+          <br>
+          <br>
           <a
             :href="tutorial.link"
             class="button is-primary"
@@ -34,8 +33,8 @@ export default {}
 </script>
 
 <style lang="sass">
-.custom-cards
-  .card
+.custom-messages
+  .message
     display: inline-block
     width: 45%
     margin-bottom: 2.5%
@@ -43,8 +42,8 @@ export default {}
       margin-left: 2.5%
 
 @media only screen and (max-width: 1023px)
-  .custom-cards
-    .card
+  .custom-messages
+    .message
       width: 100%
       margin-left: 0!important
 </style>
