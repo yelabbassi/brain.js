@@ -110,6 +110,41 @@ export default new Vuex.Store({
         link: 'https://en.wikipedia.org/wiki/Gated_recurrent_unit',
       },
     ],
+    tutorials: [
+      {
+        title: 'Learn more than numbers',
+        description: '',
+        author: 'Robert Plummer',
+        link: 'https://scrimba.com/p/pVZJQfg/c2De2Tg',
+      },
+      {
+        title: 'How to create a neural net in the browser with Brain.js',
+        description: '',
+        author: 'Per Harald Borgen',
+        link: 'https://scrimba.com/c/c36zkcb',
+      },
+      {
+        title: 'BRAIN.JS: NEURAL NETWORKS IN JAVASCRIPT',
+        description: '',
+        author: 'http://badassjs.com',
+        link:
+          'http://badassjs.com/post/729676907/brainjs-neural-networks-in-javascript',
+      },
+      {
+        title: 'Neural Networks in JavaScript with Brain.js',
+        description: '',
+        author: 'Scott Robinson',
+        link:
+          'https://stackabuse.com/neural-networks-in-javascript-with-brain-js/',
+      },
+      {
+        title: 'You can build a neural network in JavaScript',
+        description: '',
+        author: 'Daniel Simmons',
+        link:
+          'https://itnext.io/you-can-build-a-neural-network-in-javascript-even-if-you-dont-really-understand-neural-networks-e63e12713a3',
+      },
+    ],
   },
   mutations: {},
   actions: {},

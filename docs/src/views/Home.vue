@@ -11,7 +11,7 @@
       :rows="1"
       :scale="2"
       :transition-delay="250"
-      :transition-duration="1000"/>
+      :transition-duration="750"/>
 
     <!-- <br>
     <br>
