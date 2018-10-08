@@ -6,7 +6,7 @@
       <div class="container">
         <article class="media">
           <figure class="media-left">
-            <p class="image is-128x128">
+            <p class="image is-256x256">
               <img
                 src="@/assets/logo.svg"
                 alt="brain.js logo"
@@ -21,6 +21,13 @@
                 <span class="subtitle is-2">Neural networks in JavaScript</span>
                 <br>
                 for Browsers and Node.js
+                <!-- <br>
+                <br>
+                <a
+                  href="https://nodei.co/npm/brain.js/"
+                  style="border-bottom: none">
+                  <img src="https://nodei.co/npm/brain.js.png?compact=true">
+                </a> -->
               </p>
               <!-- <div class="field is-grouped">
                 <p class="control">

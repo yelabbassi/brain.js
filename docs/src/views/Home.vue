@@ -1,17 +1,10 @@
 <template>
   <div>
-    <!-- <h2 class="title is-3">About</h2> -->
-    <h2 class="title is-4">
-      <p class="">Brain.js is a library of Neural Networks written in JavaScript for Browsers and Node.js. It is super simple to use, you do not need to know Neural Networks in details to work with this.</p>
-    </h2>
-
-    <br>
-    <vue-swimlane
-      :words="featureList"
-      :rows="1"
-      :scale="2"
-      :transition-delay="250"
-      :transition-duration="750"/>
+    <h2 class="title is-3">About Brain.js</h2>
+    <h3
+      class="subtitle is-4">
+      Brain.js is a library of Neural Networks written in JavaScript for Browsers and Node.js. It is super simple to use, you do not need to know Neural Networks in details to work with this.
+    </h3>
 
     <!-- <br>
     <br>
@@ -23,7 +16,6 @@
     </div> -->
 
     <br>
-    <hr>
     <br>
     <!-- <h2 class="title is-3">Highlights</h2>
     <hr> -->
@@ -37,9 +29,10 @@
             <p><strong>{{ highlight.title }}</strong></p>
           </div> -->
           <div class="message-body">
-            <strong>
-              {{ highlight.title }}:
+            <strong class="title is-4">
+              {{ highlight.title }}
             </strong>
+            <br>
             <br>
             {{ highlight.description }}
             <br><br>
@@ -51,22 +44,6 @@
       </div>
     </div>
 
-    <br>
-    <br>
-    <br>
-
-    <div class="columns">
-      <!-- <div class="column"/> -->
-      <div class="column">
-        <article class="message is-dark">
-          <div
-            class="message-header"
-            style="text-align: center">Coming Soon!</div>
-          <div class="message-body">Brain.js is being worked on to enable GPU driven computation support for <strong>Node.js</strong></div>
-        </article>
-      </div>
-      <!-- <div class="column"/> -->
-    </div>
 
     <br>
     <br>
@@ -116,6 +93,19 @@
         </div>
       </div>
     </div>
+
+    <br>
+    <br>
+    <br>
+
+    <article class="message is-info">
+      <div class="message-body">
+        <span class="title is-5">GPU support for Node.js coming soon!</span>
+        <br>
+        Brain.js is being worked on to enable GPU driven computation support for <strong>Node.js</strong>
+      </div>
+    </article>
+
 
     <br>
     <hr>
@@ -312,21 +302,6 @@ export default {
   .tag
     margin-right: 0.5em
     margin-bottom: 0.5em
-
-.highlight-list
-  .message
-    display: inline-block
-    width: 45%
-    &:nth-child(2n)
-      margin-left: 5%
-    .message-body
-      background-color: #fff
-
-@media only screen and (max-width: 1023px)
-  .highlight-list
-    .message
-      width: 100%
-      margin-left: 0!important
 
 #svg-logo-animation-container
   #svg-logo-animation

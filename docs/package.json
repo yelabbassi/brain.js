@@ -11,8 +11,8 @@
     "register-service-worker": "^1.5.2",
     "scrollama": "^1.4.4",
     "vue": "^2.5.17",
+    "vue-bulma-accordion": "^0.3.5",
     "vue-router": "^3.0.1",
-    "vue-swimlane": "^0.3.8",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -25,7 +25,9 @@
     "imports-loader": "^0.8.0",
     "lint-staged": "^7.3.0",
     "node-sass": "^4.9.3",
+    "postcss-import": "^12.0.0",
     "sass-loader": "^7.1.0",
+    "postcss-url": "^8.0.0",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
@@ -36,6 +38,7 @@
       "plugin:vue/recommended",
       "@vue/prettier"
     ],
+    "globals": {},
     "parserOptions": {
       "parser": "babel-eslint"
     },

@@ -4,15 +4,13 @@ import router from './router'
 import store from './store'
 import './registerServiceWorker'
 
-import VueSwimlane from 'vue-swimlane'
-Vue.use(VueSwimlane)
-
 /* animation tools */
 import 'intersection-observer'
 import scrollama from 'scrollama'
 window.scrollama = scrollama
 /* animation tools */
 
+import 'vue-bulma-accordion/dist/vue-bulma-accordion.css'
 import './customized-theme.sass'
 
 Vue.config.productionTip = false

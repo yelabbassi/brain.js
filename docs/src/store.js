@@ -42,19 +42,19 @@ export default new Vuex.Store({
     ],
     highlights: [
       {
-        title: 'Simple to Use',
+        title: 'Simple',
         description:
           'Brain.js is super simple to use. You do not need to know Neural Networks in details to work with this. ',
         link: '//github.com/BrainJS/brain.js#examples',
       },
       {
-        title: 'Based on GPU.js',
+        title: 'Fast',
         description:
           'Brain.js performs computations using GPU and gracefully fallback to pure JavaSCript in Node.js or when GPU is not available.',
         link: '//github.com/gpujs/gpu.js',
       },
       {
-        title: 'Multiple Neural Networks',
+        title: 'Useful',
         description:
           'Brain.js provided multiple neural network implementations as different neural nets suited to do different things well.',
         link: '//github.com/BrainJS/brain.js#neural-network-types',
@@ -66,7 +66,7 @@ export default new Vuex.Store({
       //   link: '//github.com/BrainJS/brain.js#json',
       // },
       {
-        title: 'Export & Import',
+        title: 'Easy',
         description:
           'Easily export and import trained models to JSON format and as a function. Host pre-trained models on your website easily. ',
         link: '//github.com/BrainJS/brain.js#json',
@@ -112,12 +112,6 @@ export default new Vuex.Store({
     ],
     tutorials: [
       {
-        title: 'Learn more than numbers',
-        description: '',
-        author: 'Robert Plummer',
-        link: 'https://scrimba.com/p/pVZJQfg/c2De2Tg',
-      },
-      {
         title: 'How to create a neural net in the browser with Brain.js',
         description: '',
         author: 'Per Harald Borgen',
@@ -143,6 +137,35 @@ export default new Vuex.Store({
         author: 'Daniel Simmons',
         link:
           'https://itnext.io/you-can-build-a-neural-network-in-javascript-even-if-you-dont-really-understand-neural-networks-e63e12713a3',
+      },
+    ],
+    examples: [
+      {
+        title: 'XOR function',
+        description:
+          "Here's an example showcasing how to approximate the XOR function.",
+        link: '//jsfiddle.net/mubaidr/efLq26xd/2/embedded/js,result/',
+      },
+      {
+        title: 'Simple Letter Detection',
+        description: 'Detect letters from text.',
+        link: '//jsfiddle.net/mubaidr/79Lkqsb5/2/embedded/js,result/',
+      },
+      {
+        title: 'Childrens Book',
+        description:
+          "Writing a children's book using a recurrent neural network.",
+        link: '//jsfiddle.net/mubaidr/zdLh6bsn/3/embedded/js,result/',
+      },
+      {
+        title: 'Color Contrast',
+        description: 'Get suitable text color for given background color.',
+        link: '//jsfiddle.net/mubaidr/9vcqrb0p/1/embedded/js,result/',
+      },
+      {
+        title: 'Guess Number',
+        description: 'Guess next number in series.',
+        link: '//jsfiddle.net/mubaidr/8yeo2jmd/1/embedded/js,result/',
       },
     ],
   },

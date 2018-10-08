@@ -23,3 +23,37 @@
 
 img
   box-shadow: none
+
+.custom-cards
+  .card
+    display: inline-block
+    width: 48.5%
+    margin-bottom: 3%
+    &:nth-child(2n)
+      margin-left: 3%
+
+@media only screen and (max-width: 1023px)
+  .custom-cards
+    .card
+      width: 100%
+      margin-left: 0!important
+
+
+.highlight-list
+  .message
+    display: inline-block
+    width: 47.5%
+    margin-bottom: 5%!important
+    &:nth-child(2n)
+      margin-left: 5%
+    .message-body
+      background-color: #fff
+
+@media only screen and (max-width: 1023px)
+  .highlight-list
+    .message
+      width: 100%
+      margin-left: 0!important
+
+.subtitle
+  font-weight: normal!important;

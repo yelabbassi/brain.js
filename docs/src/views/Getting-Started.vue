@@ -7,10 +7,14 @@
 
     <!-- NPM -->
     <h2 class="subtitle is-4">NPM</h2>
-    <div class="content">
-      If you are using package manager in your project, use the folowing snippet to install <strong>Brain.js</strong>:
+    <div class="content"><a href="https://nodei.co/npm/brain.js/">
+      <img src="https://nodei.co/npm/brain.js.png?downloads=true&downloadRank=true">
+    </a>
       <br>
-      <code>npm install --save brain.js</code>
+      If you are using package manager in your project, use the folowing snippet to install <strong>Brain.js</strong>:
+
+      <br>
+      <code>npm install brain.js --save</code>
       <br>
       and then require in your code by:
       <br>
