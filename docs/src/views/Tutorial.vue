@@ -45,12 +45,34 @@
     <br>
     <br>
     <br>
-    <div class="custom-cards">
-      <div
-        v-for="(tutorial, index) in $store.state.tutorials"
-        :key="index"
-        class="card">
-        <div class="card-content">
+    <nav
+      class="navbar is-light"
+      style="z-index: 1">
+      <div class="navbar-brand">
+        <span
+          class="navbar-item">
+          <strong>Search Tutorials:</strong>
+        </span>
+        <div class="navbar-item">
+          <input
+            v-model="search"
+            class="input"
+            type="text"
+            placeholder="title or author">
+        </div>
+      </div>
+    </nav>
+
+    <br>
+    <br>
+    <div class="custom-box">
+      <transition-group
+        name="slide-up"
+        mode="out-in">
+        <div
+          v-for="(tutorial, index) in filteredTutorials"
+          :key="index"
+          class="box">
           <p class="title is-5">{{ tutorial.title }}</p>
           <p class="subtitle is-6">{{ tutorial.author }}</p>
           <a
@@ -58,7 +80,7 @@
             class="button is-primary"
             target="_blank">Open</a>
         </div>
-      </div>
+      </transition-group>
     </div>
 
     <br>
@@ -67,11 +89,53 @@
     <p>This page is open source, go ahead and include tutorial/article related to Brain.js to this list or <a
       href="//github.com/BrainJS/brain.js/issues/new"
       target="_blank">create an issue</a> and we will add it. </p>
+
+
+    <br>
+    <br>
+    <h2 class="title is-3">
+      Ready to start?
+    </h2>
+    <div class="content">
+      <p>Read
+        <a href="http://github.com/BrainJS/brain.js#brainjs">Documentation</a>
+        or view <router-link
+          to="/examples"
+          title="Examples"
+          class="">
+          Live Examples
+        </router-link>
+      </p>
+      <router-link
+        to="/getting-started"
+        class="button is-primary is-large"
+        title="Installation & Quick Start">
+        Get Started Now
+      </router-link>
+    </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      search: '',
+    }
+  },
+
+  computed: {
+    filteredTutorials() {
+      return this.$store.state.tutorials.filter(t => {
+        return (
+          t.title.includes(this.search) ||
+          t.author.includes(this.search) ||
+          t.link.includes(this.search)
+        )
+      })
+    },
+  },
+}
 </script>
 
 <style lang="sass">

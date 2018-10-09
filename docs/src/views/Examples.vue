@@ -6,32 +6,62 @@
     <p>Brain.js github repository also contains some <a href="https://github.com/BrainJS/brain.js/tree/master/examples">JavaScript Examples</a> and <a href="https://github.com/BrainJS/brain.js/tree/master/examples-typescript">Typescript Examples</a>.</p>
 
     <br>
+    <nav
+      class="navbar is-light"
+      style="z-index: 1">
+      <div class="navbar-brand">
+        <span
+          class="navbar-item">
+          <strong>Search Examples:</strong>
+        </span>
+        <div class="navbar-item">
+          <input
+            v-model="search"
+            class="input"
+            type="text"
+            placeholder="title or description">
+        </div>
+      </div>
+    </nav>
+
     <br>
-    <div
-      v-for="(example, index) in $store.state.examples"
-      :key="index">
-      <p class="title is-5">{{ example.title }}</p>
-      <p class="subtitle is-6">{{ example.description }}</p>
+    <br>
+    <transition-group
+      name="slide-up"
+      mode="out-in">
+      <div
+        v-for="(example, index) in filteredExamples"
+        :key="index">
+        <p class="title is-5">{{ example.title }}</p>
+        <p class="subtitle is-6">{{ example.description }}</p>
 
-      <bulmaAccordion>
-        <BulmaAccordionItem>
-          <h4 slot="title">View Exmaple</h4>
-          <p slot="content">
-            <iframe
-              :src="example.link"
-              width="100%"
-              height="300"
-              allowfullscreen="allowfullscreen"
-              allowpaymentrequest
-              frameborder="0"/>
-          </p>
-        </BulmaAccordionItem>
-      </BulmaAccordion>
-      <br>
-      <br>
-      <br>
-    </div>
+        <bulmaAccordion>
+          <BulmaAccordionItem>
+            <h4 slot="title">View Exmaple</h4>
+            <p slot="content">
+              <iframe
+                :src="example.link"
+                width="100%"
+                height="300"
+                allowfullscreen="allowfullscreen"
+                allowpaymentrequest
+                frameborder="0"/>
+            </p>
+          </BulmaAccordionItem>
+        </BulmaAccordion>
+        <br>
+        <br>
+        <br>
+      </div>
+    </transition-group>
 
+
+    <br>
+    <br>
+    <h2 class="title is-4">Want to add an example? </h2>
+    <p>This page is open source, go ahead and include example using Brain.js to this list or <a
+      href="//github.com/BrainJS/brain.js/issues/new"
+      target="_blank">create an issue</a> and we will add it. </p>
 
     <br>
     <br>
@@ -55,6 +85,7 @@
         Get Started Now
       </router-link>
     </div>
+
   </div>
 
 </template>
@@ -66,6 +97,24 @@ export default {
   components: {
     BulmaAccordion,
     BulmaAccordionItem,
+  },
+
+  data() {
+    return {
+      search: '',
+    }
+  },
+
+  computed: {
+    filteredExamples() {
+      return this.$store.state.examples.filter(t => {
+        return (
+          t.title.includes(this.search) ||
+          t.description.includes(this.search) ||
+          t.link.includes(this.search)
+        )
+      })
+    },
   },
 }
 </script>

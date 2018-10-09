@@ -57,3 +57,18 @@ img
 
 .subtitle
   font-weight: normal!important;
+
+
+.custom-box
+  .box
+    display: inline-block
+    width: 48.5%
+    margin-bottom: 3%
+    &:nth-child(2n)
+      margin-left: 3%
+
+@media only screen and (max-width: 1023px)
+  .custom-box
+    .box
+      width: 100%
+      margin-left: 0!important

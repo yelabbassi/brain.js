@@ -57,6 +57,7 @@
         <h2 class="title is-3">Modular</h2>
         <h3 class="subtitle is-5">Brain.js implmentation is highly modular to easily allow extendability. </h3>
 
+
         <div
           id="svg-logo-animation"
           ref="svg-logo-animation">
@@ -91,6 +92,7 @@
           </svg>
 
         </div>
+        <p class="title is-5">Modular networks to quickly prototype networks, like: FeedForward, TimeStep, Recurrent, Streaming, CrossValidation</p>
       </div>
     </div>
 
