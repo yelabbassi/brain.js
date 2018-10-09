@@ -19,7 +19,7 @@
             v-model="search"
             class="input"
             type="text"
-            placeholder="title or description">
+            placeholder="enter some text">
         </div>
       </div>
     </nav>
@@ -35,7 +35,10 @@
         <p class="title is-5">{{ example.title }}</p>
         <p class="subtitle is-6">{{ example.description }}</p>
 
-        <bulmaAccordion>
+        <bulmaAccordion
+          :icon="'plus-minus'"
+          :slide="{duration: '250ms',
+                   timerFunc: 'ease-out'}">
           <BulmaAccordionItem>
             <h4 slot="title">View Exmaple</h4>
             <p slot="content">
@@ -49,7 +52,6 @@
             </p>
           </BulmaAccordionItem>
         </BulmaAccordion>
-        <br>
         <br>
         <br>
       </div>
@@ -116,8 +118,26 @@ export default {
       })
     },
   },
+
+  methods: {
+    exampleClickHandler() {
+      console.log(this)
+    },
+  },
 }
 </script>
 
-<style>
+<style lang="sass">
+.accordion
+  .card
+    &:hover
+      box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px, rgba(0, 0, 0, 0.05) 0px 0.5px 1px;
+      transform: none;
+  .card-header
+    cursor: pointer
+  .card-header-title
+    color: rgba(55, 122, 195, 0.95)
+  .plus-minus
+    div
+      background-color: rgba(55, 122, 195, 0.95)
 </style>

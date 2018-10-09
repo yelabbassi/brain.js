@@ -58,7 +58,7 @@
             v-model="search"
             class="input"
             type="text"
-            placeholder="title or author">
+            placeholder="enter some text">
         </div>
       </div>
     </nav>
