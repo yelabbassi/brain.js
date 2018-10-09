@@ -32,7 +32,7 @@
       <div
         v-for="(example, index) in filteredExamples"
         :key="index"
-        :ref="index"
+        :ref="example.title"
         class="example-container">
         <p class="title is-5">{{ example.title }}</p>
         <p class="subtitle is-6">{{ example.description }}</p>
@@ -41,7 +41,7 @@
           :icon="'plus-minus'"
           :slide="{duration: '250ms',
                    timerFunc: 'ease-out'}"
-          @toggle="exampleClickHandler(index)">
+          @toggle="exampleClickHandler(example.title)">
           <BulmaAccordionItem>
             <h4 slot="title">View Exmaple</h4>
             <p slot="content">
