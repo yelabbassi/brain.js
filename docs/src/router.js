@@ -43,7 +43,10 @@ export default new Router({
       redirect: '/',
     },
   ],
-  scrollBehavior() {
-    return { x: 0, y: 0 }
+
+  scrollBehavior(a, b) {
+    if (a.path !== b.path) {
+      return { x: 0, y: 0 }
+    }
   },
 })

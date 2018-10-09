@@ -31,14 +31,17 @@
       mode="out-in">
       <div
         v-for="(example, index) in filteredExamples"
-        :key="index">
+        :key="index"
+        :ref="index"
+        class="example-container">
         <p class="title is-5">{{ example.title }}</p>
         <p class="subtitle is-6">{{ example.description }}</p>
 
         <bulmaAccordion
           :icon="'plus-minus'"
           :slide="{duration: '250ms',
-                   timerFunc: 'ease-out'}">
+                   timerFunc: 'ease-out'}"
+          @toggle="exampleClickHandler(index)">
           <BulmaAccordionItem>
             <h4 slot="title">View Exmaple</h4>
             <p slot="content">
@@ -58,7 +61,6 @@
     </transition-group>
 
 
-    <br>
     <br>
     <h2 class="title is-4">Want to add an example? </h2>
     <p>This page is open source, go ahead and include example using Brain.js to this list or <a
@@ -104,6 +106,7 @@ export default {
   data() {
     return {
       search: '',
+      activeExampleIndex: null,
     }
   },
 
@@ -119,9 +122,38 @@ export default {
     },
   },
 
+  created() {
+    this.activeExampleIndex = this.$route.query.example || null
+  },
+
+  mounted() {
+    window.setTimeout(() => {
+      this.$nextTick(() => {
+        this.scrollActiveExampleIntoView()
+      })
+    }, 250)
+  },
+
   methods: {
-    exampleClickHandler() {
-      console.log(this)
+    exampleClickHandler(t) {
+      this.activeExampleIndex = t
+
+      this.$router.replace({
+        path: 'examples',
+        query: { example: t },
+      })
+    },
+
+    scrollActiveExampleIntoView() {
+      const ref = this.$refs[this.activeExampleIndex]
+
+      if (ref) {
+        ref[0].scrollIntoView({
+          behavior: 'smooth',
+        })
+
+        ref[0].getElementsByClassName('card-header')[0].click()
+      }
     },
   },
 }
