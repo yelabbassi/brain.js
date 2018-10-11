@@ -30,7 +30,7 @@
             </div>
 
             <div class="content">
-              A tutorial series by the Brain.js developer about understanding Neural Networks and using Brain.js
+              A tutorial series to understand Neural Networks and Brain.js
             </div>
 
             <a
