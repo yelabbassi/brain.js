@@ -1,6 +1,7 @@
 import assert from 'assert';
 import Matrix from '../../../src/recurrent/matrix';
 import multiply from '../../../src/recurrent/matrix/multiply';
+import { multiplyOptimized, getMultiplyList } from '../../../src/recurrent/matrix/multiply';
 import multiplyB from '../../../src/recurrent/matrix/multiply-b';
 
 describe('matrix', () => {
@@ -8,21 +9,45 @@ describe('matrix', () => {
     context('when given a left and right matrix both of 2 rows and 2 columns', () => {
       it('correctly multiplies the values', () => {
         const m1 = Matrix.fromArray([
-          [2, 2],
-          [2, 2]
+          [1, 2],
+          [3, 4]
         ]);
         const m2 = Matrix.fromArray([
-          [2, 2],
-          [2, 2]
+          [5, 6],
+          [7, 8]
         ]);
         const result = new Matrix(2, 2);
         multiply(result, m1, m2);
-        const weights = [8, 8, 8, 8];
+        const weights = [19, 22, 43, 50];
         assert.equal(result.weights.length, 4);
         result.weights.forEach((value, i) => {
           assert.equal(value, weights[i]);
         });
       });
+    });
+  });
+
+  describe('multiplyOptimized', () => {
+    function getMatrices() {
+      return {
+        left: Matrix.fromArray([
+          [1, 2],
+          [3, 4]
+        ]),
+        right: Matrix.fromArray([
+          [5, 6],
+          [7, 8]
+        ]),
+        product: new Matrix(2, 2)
+      };
+    }
+    it('works the same as multiply', () => {
+      const expected = getMatrices();
+      multiply(expected.product, expected.left, expected.right);
+      const result = getMatrices();
+      const list = getMultiplyList(result.product, result.left, result.right);
+      multiplyOptimized(result.product, result.left, result.right, list);
+      assert.deepEqual(result.product, expected.product);
     });
   });
 

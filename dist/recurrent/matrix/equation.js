@@ -191,10 +191,13 @@ var Equation = function () {
         throw new Error('misaligned matrices');
       }
       var product = new _2.default(left.rows, right.columns);
+      var list = (0, _multiply2.getMultiplyList)(product, left, right);
       this.states.push({
         left: left,
         right: right,
         product: product,
+        list: list,
+        // forwardFn: multiplyOptimized,
         forwardFn: _multiply3.default,
         backpropagationFn: _multiplyB2.default
       });
@@ -364,7 +367,7 @@ var Equation = function () {
         if (!state.hasOwnProperty('forwardFn')) {
           continue;
         }
-        state.forwardFn(state.product, state.left, state.right);
+        state.forwardFn(state.product, state.left, state.right, state.list);
       }
 
       return state.product;
@@ -385,7 +388,7 @@ var Equation = function () {
         if (!state.hasOwnProperty('forwardFn')) {
           continue;
         }
-        state.forwardFn(state.product, state.left, state.right);
+        state.forwardFn(state.product, state.left, state.right, state.list);
       }
 
       return state.product;
@@ -406,7 +409,7 @@ var Equation = function () {
         if (!state.hasOwnProperty('backpropagationFn')) {
           continue;
         }
-        state.backpropagationFn(state.product, state.left, state.right);
+        state.backpropagationFn(state.product, state.left, state.right, state.list);
       }
 
       return state.product;
@@ -431,7 +434,7 @@ var Equation = function () {
         if (!state.hasOwnProperty('backpropagationFn')) {
           continue;
         }
-        state.backpropagationFn(state.product, state.left, state.right);
+        state.backpropagationFn(state.product, state.left, state.right, state.list);
       }
 
       return state.product;

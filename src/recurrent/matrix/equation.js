@@ -6,6 +6,7 @@ import add from './add';
 import addB from './add-b';
 import allOnes from './all-ones';
 import multiply from './multiply';
+import { getMultiplyList, multiplyOptimized } from './multiply';
 import multiplyB from './multiply-b';
 import multiplyElement from './multiply-element';
 import multiplyElementB from './multiply-element-b';
@@ -101,12 +102,15 @@ export default class Equation {
     if (left.columns !== right.rows) {
       throw new Error('misaligned matrices');
     }
-    let product = new Matrix(left.rows, right.columns);
+    const product = new Matrix(left.rows, right.columns);
+    const list = getMultiplyList(product, left, right);
     this.states.push({
       left: left,
       right: right,
       product: product,
-      forwardFn: multiply,
+      list: list,
+      forwardFn: multiplyOptimized,
+      // forwardFn: multiply,
       backpropagationFn: multiplyB
     });
     return product;
@@ -247,7 +251,7 @@ export default class Equation {
       if (!state.hasOwnProperty('forwardFn')) {
         continue;
       }
-      state.forwardFn(state.product, state.left, state.right);
+      state.forwardFn(state.product, state.left, state.right, state.list);
     }
 
     return state.product;
@@ -265,7 +269,7 @@ export default class Equation {
       if (!state.hasOwnProperty('forwardFn')) {
         continue;
       }
-      state.forwardFn(state.product, state.left, state.right);
+      state.forwardFn(state.product, state.left, state.right, state.list);
     }
 
     return state.product;
@@ -283,7 +287,7 @@ export default class Equation {
       if (!state.hasOwnProperty('backpropagationFn')) {
         continue;
       }
-      state.backpropagationFn(state.product, state.left, state.right);
+      state.backpropagationFn(state.product, state.left, state.right, state.list);
     }
 
     return state.product;
@@ -303,7 +307,7 @@ export default class Equation {
       if (!state.hasOwnProperty('backpropagationFn')) {
         continue;
       }
-      state.backpropagationFn(state.product, state.left, state.right);
+      state.backpropagationFn(state.product, state.left, state.right, state.list);
     }
 
     return state.product;
